@@ -716,7 +716,13 @@ test_kimi_unconfirmed_delivery_fails_loudly() {
     "unconfirmed kimi delivery lacked a loud diagnostic"
   assert_grep 'failed: kimi brief pointer delivery was not confirmed' <(sed -E 's/ \[at=[0-9]+\]//' "$HOME_DIR/state/$id.status") \
     "unconfirmed kimi delivery did not leave a supervisor-visible failure"
-  pass "fm-spawn: kimi treats a silent pointer drop as a failed spawn"
+  # The failure names the last poll's signals: the dropped pointer left an
+  # empty composer with no echo and no context, so the composer was not the gap.
+  assert_contains "$out" "last composer verdict 'empty'; echoed pointer no; nonzero context no" \
+    "unconfirmed kimi delivery did not name the signals its last poll saw"
+  assert_grep 'Never Ask' "$HOME_DIR/data/$id/kimi-delivery-failure.txt" \
+    "unconfirmed kimi delivery did not keep the last visible screen"
+  pass "fm-spawn: kimi treats a silent pointer drop as a failed spawn and names the missing signal"
 }
 
 test_kimi_readiness_gate_precedes_pointer() {

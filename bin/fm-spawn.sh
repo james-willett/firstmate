@@ -4316,26 +4316,44 @@ kimi_wait_for_ready() {
   return 1
 }
 
+# Each poll records what it saw in KIMI_DELIVERY_COMPOSER, KIMI_DELIVERY_ECHO,
+# and KIMI_DELIVERY_CONTEXT, so an unconfirmed delivery can say which signal
+# was missing instead of only that one was.
 kimi_delivery_is_confirmed() { # <plain-pane-capture>
   local pane=$1
-  kimi_composer_is_empty || return 1
-  if { printf '%s\n' "$pane" | grep -Fq '✨' &&
-    printf '%s\n' "$pane" | grep -Fq 'Read the brief at'; } ||
-    printf '%s\n' "$pane" |
-    grep -qiE 'context:[[:space:]]*(0\.[0-9]*[1-9][0-9]*|[1-9][0-9]*([.][0-9]+)?)[[:space:]]*%'; then
-    return 0
+  KIMI_DELIVERY_COMPOSER=$(fm_backend_composer_state "$BACKEND" "$T" "$W" 2>/dev/null)
+  KIMI_DELIVERY_ECHO=0
+  KIMI_DELIVERY_CONTEXT=0
+  if printf '%s\n' "$pane" | grep -Fq '✨' &&
+    printf '%s\n' "$pane" | grep -Fq 'Read the brief at'; then
+    KIMI_DELIVERY_ECHO=1
   fi
-  return 1
+  if printf '%s\n' "$pane" |
+    grep -qiE 'context:[[:space:]]*(0\.[0-9]*[1-9][0-9]*|[1-9][0-9]*([.][0-9]+)?)[[:space:]]*%'; then
+    KIMI_DELIVERY_CONTEXT=1
+  fi
+  [ "$KIMI_DELIVERY_COMPOSER" = empty ] || return 1
+  [ "$KIMI_DELIVERY_ECHO" = 1 ] || [ "$KIMI_DELIVERY_CONTEXT" = 1 ]
 }
 
+# On failure KIMI_DELIVERY_FAILURE_DETAIL names the last poll's signals, and
+# the last visible screen is kept beside the brief as kimi-delivery-failure.txt
+# so the shape that was refused can be classified after the pane has moved on.
 kimi_wait_for_delivery() {
   local pane i=0 max=${FM_KIMI_DELIVERY_POLLS:-40} interval=${FM_KIMI_POLL_INTERVAL:-0.5}
+  local echo_seen=no context_seen=no evidence="$DATA/$ID/kimi-delivery-failure.txt"
   while [ "$i" -lt "$max" ]; do
     pane=$(kimi_capture)
     kimi_delivery_is_confirmed "$pane" && return 0
     i=$((i + 1))
     [ "$i" -ge "$max" ] || sleep "$interval"
   done
+  [ "$KIMI_DELIVERY_ECHO" = 1 ] && echo_seen=yes
+  [ "$KIMI_DELIVERY_CONTEXT" = 1 ] && context_seen=yes
+  KIMI_DELIVERY_FAILURE_DETAIL="kimi brief pointer delivery was not confirmed (submit verdict '${KIMI_SUBMIT_VERDICT:-none}'; last composer verdict '${KIMI_DELIVERY_COMPOSER:-none}'; echoed pointer $echo_seen; nonzero context $context_seen)"
+  if kimi_visible_capture > "$evidence" 2>/dev/null; then
+    KIMI_DELIVERY_FAILURE_DETAIL="$KIMI_DELIVERY_FAILURE_DETAIL; last screen saved to $evidence"
+  fi
   return 1
 }
 
@@ -5785,7 +5803,7 @@ if [ "$HARNESS" = kimi ]; then
     exit 1
   fi
   if ! kimi_wait_for_delivery; then
-    kimi_spawn_fail "kimi brief pointer delivery was not confirmed"
+    kimi_spawn_fail "$KIMI_DELIVERY_FAILURE_DETAIL"
     exit 1
   fi
 fi
