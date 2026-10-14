@@ -1031,6 +1031,17 @@ test_matrix_kimi_footer_zone() {
   assert_screen "kimi 2.1.1 working after submit on herdr" empty "$CAPS_STYLED" "$working"
   assert_screen "kimi 2.1.1 settled reply on herdr" empty "$CAPS_STYLED" "$settled"
 
+  # Kimi 2.1.1 labels a model without effort levels with a bare `thinking`
+  # and drops the cell when thinking is off; both are the same furniture.
+  assert_screen "kimi 2.1.1 idle, bare thinking cell, on herdr" empty "$CAPS_STYLED" \
+    "${idle/K3 thinking: high/K2.7 Code Highspeed thinking}"
+  assert_screen "kimi 2.1.1 idle, bare thinking cell, on cmux/orca" empty "$CAPS_PLAIN" \
+    "${plain/K3 thinking: high/K2.7 Code Highspeed thinking}"
+  assert_screen "kimi 2.1.1 idle, thinking off, on herdr" empty "$CAPS_STYLED" \
+    "${idle/K3 thinking: high/K3}"
+  assert_screen "kimi 2.1.1 idle, thinking off, on cmux/orca" empty "$CAPS_PLAIN" \
+    "${plain/K3 thinking: high/K3}"
+
   # The early-Enter shape from the reported failure: the pointer on the first
   # content row, the cursor on an empty second row, the same footer below.
   captain=$' ╭──────────────────────────────────────────────────────────────────────╮\n │ > Read the brief at /h/data/t/launch-brief.md and follow it exactly. │\n │                                                                      │\n ╰──────────────────────────────────────────────────────────────────────╯\n Never Ask  K3 thinking: high  …/project-a1b2c3/1/project           ! to run a shell command | /compact compresses context when it gets long\n                                                                     context: 0% (0/1M)'

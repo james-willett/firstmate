@@ -111,8 +111,8 @@
 #
 # KIMI'S FOOTER is the one zone under a SHELL-glyph envelope, and the one that
 # lifts a refusal instead of demoting a candidate. Kimi Code draws its
-# `Never Ask ... thinking: ...` status row and right-aligned `context: N%
-# (...)` row directly under its bordered `│ > │` composer, which made every
+# `Never Ask <model> ...` status row and right-aligned `context: N% (...)`
+# row directly under its bordered `│ > │` composer, which made every
 # cursorless read of an idle Kimi pane `unknown` (issue 4306). Because this
 # zone moves a verdict toward `empty`, it is bounded tighter than the rule
 # above: the bordered `>` box counts as an envelope only for that exact
@@ -516,11 +516,14 @@ FM_COMPOSER_MODE_HINT_RE_DEFAULT='^[[:space:]]*(⏵|⏸)'
 # `Never Ask  K3 thinking: high  …/<cwd>     /init: generate AGENTS.md` and a
 # right-aligned `context: 9% (22.6k/256k)` (also `(0/1M)` for 1M-context
 # models). `Never Ask` is the `--auto` tier every Firstmate spawn launches
-# with; the model may be several words (`K2.8 Preview`) and a rotating tip may
-# trail the status row, so only the tier, the `thinking:` label, and the
-# context cell's shape are matched. Both are matched against trimmed rows,
-# ASCII-only, so the same bytes match under LC_ALL=C.
-FM_COMPOSER_KIMI_STATUS_RE_DEFAULT='^Never Ask[[:space:]]+[^[:space:]].*[[:space:]]thinking:[[:space:]]+[a-z]+([[:space:]]|$)'
+# with. The model may be several words (`K2.8 Preview`), its thinking cell is
+# `thinking: <effort>` for a model with effort levels, a bare `thinking` for
+# one without, and absent when thinking is off, and a rotating tip may trail
+# the status row, so only the leading tier and the context cell's shape are
+# matched; the box, the pair's order, and the blank rows beneath it carry the
+# rest of the proof. Both are matched against trimmed rows, ASCII-only, so the
+# same bytes match under LC_ALL=C.
+FM_COMPOSER_KIMI_STATUS_RE_DEFAULT='^Never Ask[[:space:]]+[^[:space:]]'
 FM_COMPOSER_KIMI_CONTEXT_RE_DEFAULT='^context:[[:space:]]+[0-9]+(\.[0-9]+)?%[[:space:]]+\([0-9]+(\.[0-9]+)?[kKmM]?/[0-9]+(\.[0-9]+)?[kKmM]?\)$'
 # omp (Oh My Pi) draws a one-row status line directly BELOW its borderless
 # composer: an identity or spinner cell, then middle-dot separated model, path,
