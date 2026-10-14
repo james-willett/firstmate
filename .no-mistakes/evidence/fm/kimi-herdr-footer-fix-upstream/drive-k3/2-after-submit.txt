@@ -1,0 +1,29 @@
+kimi --model 'kimi-code/k3' --auto
+╭─   scratch ·······································································································
+╰─❯ kimi --model 'kimi-code/k3' --auto
+
+ ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │                                                                                                                   │
+ │  ▐█▛█▛█▌  Welcome to Kimi Code!                                                                                   │
+ │  ▐█████▌  Send /help for help information.                                                                        │
+ │                                                                                                                   │
+ │  Directory: /private/var/folders/qs/y50g_x2s6kb195cw5gvg5hmr0000gn/T/fm-kimi-drive.AFHTlr/scratch                 │
+ │  Session:   session_a1f824db-8c45-43f2-a14c-fa23aafa5f3f                                                          │
+ │  Model:     K3                                                                                                    │
+ │  Version:   2.1.1                                                                                                 │
+ │                                                                                                                   │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+ ✦ Kimi Code Desktop is here — Everything you love about Kimi Code, now on desktop
+   Run /desktop or visit https://www.kimi.com/code to install
+
+   No session yet — one will be created on your first message.
+
+ ✨ Reply with exactly FMKIMIPONG4140522339 and nothing else.
+
+  🌗 · Tip: ctrl-s to add guidance without waiting for the turn to finish
+ ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ >                                                                                                                 │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ Never Ask  K3 thinking: high  …/T/fm-kimi-drive.AFHTlr/scratch    ask Kimi to schedule tasks, e.g. "remind me at 5pm"
+                                                                                                  context: 0% (0/256k)

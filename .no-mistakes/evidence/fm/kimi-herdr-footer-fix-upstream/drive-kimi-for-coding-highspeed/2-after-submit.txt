@@ -1,0 +1,29 @@
+kimi --model 'kimi-code/kimi-for-coding-highspeed' --auto
+╭─   scratch ·······································································································
+╰─❯ kimi --model 'kimi-code/kimi-for-coding-highspeed' --auto
+
+ ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │                                                                                                                   │
+ │  ▐█▛█▛█▌  Welcome to Kimi Code!                                                                                   │
+ │  ▐█████▌  Send /help for help information.                                                                        │
+ │                                                                                                                   │
+ │  Directory: /private/var/folders/qs/y50g_x2s6kb195cw5gvg5hmr0000gn/T/fm-kimi-drive.nM5muC/scratch                 │
+ │  Session:   session_c0e928a3-f964-4d4d-9448-de559a67e878                                                          │
+ │  Model:     K2.7 Code Highspeed                                                                                   │
+ │  Version:   2.1.1                                                                                                 │
+ │                                                                                                                   │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+ ✦ Kimi Code Desktop is here — Everything you love about Kimi Code, now on desktop
+   Run /desktop or visit https://www.kimi.com/code to install
+
+   No session yet — one will be created on your first message.
+
+ ✨ Reply with exactly FMKIMIPONG8541111279 and nothing else.
+
+  🌘 · Tip: @: mention files
+ ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ >                                                                                                                 │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ Never Ask  K2.7 Code Highspeed thinking  …/T/fm-kimi-drive.nM5muC/scratch
+                                                                                                  context: 0% (0/256k)
