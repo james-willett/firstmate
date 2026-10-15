@@ -1,0 +1,36 @@
+Kimi 2.2.0 model=kimi-code/kimi-for-coding-highspeed on herdr 0.9.3, lab session fm-lab-kimi-sub-highspe-86757-304
+== 1. idle readiness verdict (fm_backend_herdr_composer_state): empty
+   No session yet — one will be created on your first message.
+ ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ >                                                                                                                 │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ Never Ask  K2.7 Code Highspeed thinking  …/T/fm-kimi-sub.LNgB4i/scratch                          /model: switch model
+                                                                                                  context: 0% (0/256k)
+== 2. fm_backend_herdr_send_text_submit verdict: empty
+== 3. screen 25s after submit (recent 40 lines)
+ │  Model:     K2.7 Code Highspeed                                                                                   │
+ │  Version:   2.2.0                                                                                                 │
+ │                                                                                                                   │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ ✦ Kimi Code Desktop is here — Everything you love about Kimi Code, now on desktop
+   Run /desktop or visit https://www.kimi.com/code to install
+   No session yet — one will be created on your first message.
+ ❯ Reply with exactly FMKIMIOKhighspeed and nothing else.
+   Error: [provider.auth_error] 401 Your current subscription does not have access to kimi-for-coding-highspeed.
+ Upgrade to higher-tier Kimi Code plans. Upgrade: https://www.kimi.com/code?from=server_highspeed_error#pricing
+   If this persists, run `/export-debug-zip` and share the file with us for diagnosis. Please don't share it publicly.
+ ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ >                                                                                                                 │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ Never Ask  K2.7 Code Highspeed thinking  …/T/fm-kimi-sub.LNgB4i/scratch                          /model: switch model
+                                                                                                context: 1% (205/256k)
+== 4. composer verdict after reply: empty
+== 5. after /exit (leftover box+footer above shell): unknown
+ │ >                                                                                                                 │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ Never Ask  K2.7 Code Highspeed thinking  …/T/fm-kimi-sub.LNgB4i/scratch
+ Shutting down… (running shutdown hooks)                                                        context: 1% (205/256k)
+ Bye!
+ To resume this session: kimi -r session_b8227298-9717-4597-bac5-322a243ec727
+╭─   scratch ·································································································  31s
+╰─❯

@@ -1,0 +1,4 @@
+ok - Kimi Code 2.1.1 on herdr 0.9.3: the idle composer under Kimi's status and context rows classifies empty
+ok - Kimi Code 2.1.1 on herdr 0.9.3: the submit path delivers a prompt that Kimi echoes and answers
+ok - Kimi Code 2.1.1 on herdr 0.9.3: after /exit the leftover composer and footer above a shell classify unknown
+model=kimi-code/k3, unmodified committed guard. The running TUI was 2.1.1: it answered the "❯ Trust this folder" dialog and drew the ✨ reply marker, neither of which 2.2.0 draws. Kimi's own updater swapped the binary to 2.2.0 at 09:52 after this run launched.

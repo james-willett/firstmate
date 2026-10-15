@@ -1,0 +1,28 @@
+kimi --model 'kimi-code/k3' --auto
+╭─   scratch ·······································································································
+╰─❯ kimi --model 'kimi-code/k3' --auto
+Kimi Code updated to v2.2.0
+Changelog: https://moonshotai.github.io/kimi-code/en/release-notes/changelog.html
+
+ ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │                                                                                                                   │
+ │  ▐█▛█▛█▌  Welcome to Kimi Code!                                                                                   │
+ │  ▐█████▌  Send /help for help information.                                                                        │
+ │                                                                                                                   │
+ │  Directory: <scratch>                    │
+ │  Session:                                                                                                         │
+ │  Model:     K3                                                                                                    │
+ │  Version:   2.2.0                                                                                                 │
+ │                                                                                                                   │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+ ✦ Kimi Code Desktop is here — Everything you love about Kimi Code, now on desktop
+   Run /desktop or visit https://www.kimi.com/code to install
+
+   No session yet — one will be created on your first message.
+
+ ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ >                                                                                                                 │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ Never Ask  K3 thinking: high  …/T/fm-kimi-ev.IAuP8j/scratch              /web: use the Web UI for a better experience
+                                                                                                  context: 0% (0/256k)

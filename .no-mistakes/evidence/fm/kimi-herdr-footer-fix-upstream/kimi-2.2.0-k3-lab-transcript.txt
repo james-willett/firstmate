@@ -1,0 +1,36 @@
+Kimi 2.2.0 model=kimi-code/k3 on herdr 0.9.3, lab session fm-lab-kimi-sub-k3-69181-27350
+== 1. idle readiness verdict (fm_backend_herdr_composer_state): empty
+   No session yet — one will be created on your first message.
+ ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ >                                                                                                                 │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ Never Ask  K3 thinking: high  …/T/fm-kimi-sub.YKbeL2/scratch              @: mention files | ! to run a shell command
+                                                                                                  context: 0% (0/256k)
+== 2. fm_backend_herdr_send_text_submit verdict: empty
+== 3. screen 25s after submit (recent 40 lines)
+ │  Model:     K3                                                                                                    │
+ │  Version:   2.2.0                                                                                                 │
+ │                                                                                                                   │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ ✦ Kimi Code Desktop is here — Everything you love about Kimi Code, now on desktop
+   Run /desktop or visit https://www.kimi.com/code to install
+   No session yet — one will be created on your first message.
+ ❯ Reply with exactly FMKIMIOKk3 and nothing else.
+ ● User wants exact string reply only. Final message exactly FMKIMIOKk3. No extra words. Need not use tools. Ensure
+   final exactly.
+ ● FMKIMIOKk3
+ ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ >                                                                                                                 │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ Never Ask  K3 thinking: high  …/T/fm-kimi-sub.YKbeL2/scratch              @: mention files | ! to run a shell command
+                                                                                              context: 9% (22.7k/256k)
+== 4. composer verdict after reply: empty
+== 5. after /exit (leftover box+footer above shell): unknown
+ │ >                                                                                                                 │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ Never Ask  K3 thinking: high  …/T/fm-kimi-sub.YKbeL2/scratch            /compact compresses context when it gets long
+ Shutting down… (running shutdown hooks)                                                      context: 9% (22.7k/256k)
+ Bye!
+ To resume this session: kimi -r session_8c3138b7-d878-4d5c-8a26-9d9d1f8cd395
+╭─   scratch ·································································································  31s
+╰─❯

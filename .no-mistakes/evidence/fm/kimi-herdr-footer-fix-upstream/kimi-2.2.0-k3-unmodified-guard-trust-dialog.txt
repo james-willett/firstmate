@@ -1,0 +1,2 @@
+not ok - Kimi Code 2.2.0 on herdr 0.9.3: the idle composer never classified empty (last verdict: pending); readiness and delivery confirmation cannot pass
+model=kimi-code/k3 exit=1

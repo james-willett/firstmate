@@ -1,0 +1,3 @@
+ok - Kimi Code 2.2.0 on herdr 0.9.3: the idle composer under Kimi's status and context rows classifies empty
+not ok - Kimi Code 2.2.0 on herdr 0.9.3: submit reported 'empty' but the echoed message, reply, and nonzero context never rendered
+model=kimi-code/kimi-for-coding-highspeed exit=1 (guard copy with 2.2.0 trust matcher)

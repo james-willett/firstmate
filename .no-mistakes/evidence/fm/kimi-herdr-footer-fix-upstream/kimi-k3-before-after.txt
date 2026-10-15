@@ -1,0 +1,5 @@
+Kimi 2.2.0 model=kimi-code/k3, Herdr , lab session fm-lab-kimi-ev-k3-2741-14574
+Same captured idle screen (see kimi-k3-idle-screen.txt):
+  base a24f4cb fm_composer_classify_screen -> unknown
+  branch 7949be4 fm_composer_classify_screen -> empty
+  branch fm_backend_herdr_composer_state (live re-read) -> empty

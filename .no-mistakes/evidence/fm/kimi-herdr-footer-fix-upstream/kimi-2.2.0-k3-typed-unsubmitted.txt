@@ -1,0 +1,8 @@
+Kimi 2.2.0 model=kimi-code/k3 on herdr 0.9.3, lab session fm-lab-kimi-typ-k3-82757-13725
+== idle verdict: empty
+== verdict with unsubmitted text in the composer (must not be empty): pending
+ ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ > Read the brief at /tmp/not-submitted.md and follow it exactly.                                                  │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ Never Ask  K3 thinking: high  …/T/fm-kimi-typ.rOtoQ0/scratch             /web: use the Web UI for a better experience
+                                                                                                  context: 0% (0/256k)
